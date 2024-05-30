@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            width: 400px;
+            height: 200px;
+            margin-top: 80px;
+            margin-left: 450px;
+        }
+
+        #evenBtn, #OddBtn{
+            background-color: aqua;
+        }
+
+    </style>
+
+    <script>
+        alert("MIDTERMS KEMERUT");
+        var no1 = 0;
+        var no2 = 0;
+        var ans = 0;
+
+        function Even(){
+            no1 = parseInt(document.getElementById("num1").value);
+            no2 = parseInt(no1);
+            
+            while(no1 > 0){
+                if(no1 % 2 == 0){
+                    ans += no1;
+                    console.log(ans);
+                    console.log("The SUM of Even Sequence of " + no1 + " is " + ans);
+
+                }
+                
+            no1--;
+            }
+        document.getElementById("result").innerHTML = ("the SUM of Even Sequence of " + no2 + " is " + ans);
+        }
+
+        function Odd(){
+            no1 = parseInt(document.getElementById("num1").value);
+            no2 = parseInt(no1);
+            
+            while(no1 > 0){
+                if(no1 % 2 ){
+                    ans += no1;
+                    console.log(ans);
+                    console.log("The SUM of Even Sequence of " + no1 + " is " + ans);
+
+                }
+                
+            no1--;
+            }
+        document.getElementById("result").innerHTML = ("the SUM of Even Sequence of " + no2 + " is " + ans);
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <h2>mid</h2>
+
+    <label>Number:</label>
+    <input type="number" id="num1" /> <br>
+    <br>
+
+    <input type="button" value="Sum of Even" onClick="Even()" id="evenBtn">
+    <input type="button" value="Sum of Odd" onClick="Odd()" id="OddBtn">
+
+    <p id="result"></p>
+
+    
+</body>
+</html>
